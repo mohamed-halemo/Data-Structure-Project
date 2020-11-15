@@ -1,6 +1,6 @@
 #pragma once
 
-
+//test
 #define MaxDistance  60         // the maximum distance between any enemy and castle
 #define MinDistance  2          // the minimum distance between any enemy and castle
 #define MaxVerticalEnemies  15   // the maximum number of enemies that can be drawn in one quarter (region)
