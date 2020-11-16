@@ -18,7 +18,7 @@ private:
 								  			// No matter what list type you are using to hold enemies, 
 											// you must pass the enemies to the GUI function as an array of enemy pointers. 
 											// At every time step, you should update those pointers 
-											// to point to the current active enemies 
+	//m										// to point to the current active enemies 
 											// then pass the pointers list to the GUI function
 
 	Queue<Enemy*> Q_Inactive;		//Queue of inactive enemies
