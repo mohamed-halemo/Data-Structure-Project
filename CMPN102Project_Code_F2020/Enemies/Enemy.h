@@ -17,7 +17,7 @@ protected:
 	int Distance;	//Horizontal distance between enemy & the tower of its region
 					//Always positive (ranges from 2 to 60)
 	double Health;	//Enemy health
-	//added by Medo         ////////////////////////////////////////////////////////////////////////
+	//added by ABDELHALEM         ////////////////////////////////////////////////////////////////////////
 	double Power;
 	int ReloadTime;
 	int Speed;
@@ -48,7 +48,7 @@ public:
 
 	int GetArrvTime() const;
 
-	//	Added by Medo            ///////////////////////////////////////////////////////////
+	//	Added by ABDELHALEM            ///////////////////////////////////////////////////////////
 
 	//void SetArrvTime(int);  (ASK do it or not)
 
