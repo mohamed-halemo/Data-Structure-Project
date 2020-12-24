@@ -19,6 +19,13 @@ public:
 	void SetHealth(double h);
 	double GetHealth() const;
 
+	//////////////////////////////////////////////////////
+	void setPower(double P);
+	double getPower();
+	void setNumberOfEnemiesBeingAttacked(int N);
+	int getNumberOfEnemiesBeingAttacked();
+	int getNumberOfKilledEnemies();
+
 	//
 	// TODO: Add More Member Functions As Needed
 	//
