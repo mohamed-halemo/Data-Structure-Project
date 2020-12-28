@@ -7,6 +7,8 @@ Enemy::Enemy(int id, int arrTime, int d) :ID(id), ArrvTime(arrTime)
 	LifeTime = FirstShotDelay + KillDelay;
 }
 
+
+
 Enemy::~Enemy()
 {
 }
@@ -54,6 +56,39 @@ int Enemy::GetArrvTime() const
 {
 	return ArrvTime;
 }
+
+
+//////yousef
+void Enemy::SetEnemyType(ENMY_TYPE ET)
+{
+	Enemy_Type = ET;
+}
+ENMY_TYPE Enemy::GetEnemyType()
+{
+	return Enemy_Type;
+}
+void Enemy::SetActive_Enemy(bool x){
+	Active_Enemy=x;
+}
+bool Enemy::GetActive_Enemy(){
+	return Active_Enemy;
+}
+void Enemy::SetFrosted_Enemy(bool x){
+	Frosted_Enemy=x;
+}
+bool Enemy::GetFrosted_Enemy(){
+	return Frosted_Enemy;
+}
+
+void Enemy::SetFire_Power(double x){
+	Fire_Power=x;
+}
+double Enemy::GetFire_Power(){
+	return Fire_Power;
+}
+
+//////yousef
+
 /////////////Added by ABDELHALEM ///////////////////////////////////////////////////////////////////////////////////////////
 void Enemy::SetHealth(double H)
 {
@@ -72,13 +107,13 @@ int Enemy::GetPower()
 {
 	return Power;
 }
-void Enemy::SetReloadTime(int RT)
+void Enemy::SetReload_Period(int RT)
 {
-	ReloadTime = RT;
+	Reload_Period = RT;
 }
-int Enemy::GetReloadTime()
+int Enemy::GetReload_Period()
 {
-	return ReloadTime;
+	return Reload_Period;
 }
 void Enemy::SetSpeed(int S)
 {
@@ -104,14 +139,7 @@ int Enemy::GetPriority()
 {
 	return Priority;
 }
-void Enemy::SetEnemyType(int ET)
-{
-	EnemyType = ET;
-}
-int Enemy::GetEnemyType()
-{
-	return EnemyType;
-}
+
 void Enemy::SetFirstShotDelay(int FirstD)
 {
 	FirstShotDelay = FirstD;
