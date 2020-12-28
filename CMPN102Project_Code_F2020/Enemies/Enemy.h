@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "..\Defs.h"
 #include "..\CMUgraphicsLib\CMUgraphics.h"
@@ -17,19 +17,33 @@ protected:
 	int Distance;	//Horizontal distance between enemy & the tower of its region
 					//Always positive (ranges from 2 to 60)
 	double Health;	//Enemy health
-	//added by ABDELHALEM         ////////////////////////////////////////////////////////////////////////
-	double Power;
-	int ReloadTime;
-	int Speed;
-	int AttackTime;//the seconds when enemy is attacking
-	int FirstShotDelay; //First Shot Delay FD = Tfirst_shot - Tarrival 
-	int KillTimeStep; //Kill Time Step
-	int KillDelay; //KillDelay KD = Tenemy_killed - Tfirst_shot 
-	int LifeTime; //Life Time (FD+KD)
+	
+	
+	///////yousef
+															
+	double Power;			 //The power of the enemy.
+	int Reload_Period;		 //Time for an enemy to reload its weapon.
+	int Speed;				 //number of meters an enemy can move in a single time step.
+	ENMY_TYPE Enemy_Type;    //Fighter, Healer or Freezer															
+	bool Active_Enemy;       //is an enemy with Arrival Time ≤ current time step & Health > 0.
+	bool Frosted_Enemy;      //Frosted enemies cannot move or attack castle.														
+	int Fire_Power; 
+	///////yousef
+	
+
+	//added by ABDELHALEM    ////////////////////////////////////////////////////////////////////////
+	int AttackTime;//the seconds when enemy is attacking                           xxxxxx
+	int FirstShotDelay; //First Shot Delay FD = Tfirst_shot - Tarrival             xxxxxxx
+	int KillTimeStep; //Kill Time Step                                             xxxxxx
+	int KillDelay; //KillDelay KD = Tenemy_killed - Tfirst_shot                    xxxxxx
+	int LifeTime; //Life Time (FD+KD)                                               xxxxxxx
 	int FrostedTime;//frosted Time (castle1st frost shot+frosting time)
 	int Priority;
-	int EnemyType;
-	//                   /////////////////////////////////////////////////////////////////////////////
+	
+	//    /////////////////////////////////////////////////////////////////////////////
+	
+	
+	
 	// TODO: Add More Data Members As Needed
 	//
 
@@ -48,6 +62,19 @@ public:
 
 	int GetArrvTime() const;
 
+	//////yousef
+	void SetEnemyType(ENMY_TYPE t);
+	ENMY_TYPE GetEnemyType();
+	void SetActive_Enemy(bool);
+	bool GetActive_Enemy();
+	void SetFrosted_Enemy(bool);
+	bool GetFrosted_Enemy();
+	
+	void SetFire_Power(double);
+	double GetFire_Power();
+	
+	/////yousef
+
 	//	Added by ABDELHALEM            ///////////////////////////////////////////////////////////
 
 	//void SetArrvTime(int);  (ASK do it or not)
@@ -56,21 +83,22 @@ public:
 
 
 
-
+	void SetHealth(double);
 	double GetHealth();
-	void SetHealth(double h);
-	void SetPower(int);
 	int GetPower();
-	void SetReloadTime(int);
-	int GetReloadTime();
-	void SetSpeed(int);
+	void SetPower(int);
+	int GetReload_Period();
+	void SetReload_Period(int);
 	int GetSpeed();
+	void SetSpeed(int);
+	
+	
+	
 	void SetAttackTime(int);
 	int GetAttackTime();
 	void SetPriority(int);
 	int GetPriority();
-	void SetEnemyType(int t);
-	int GetEnemyType();
+	
 	void SetFirstShotDelay(int F);
 	int GetFirstShotDelay();
 	void SetKillTimeStep(int T);
