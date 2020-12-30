@@ -34,6 +34,7 @@ private:
 
 	//
 	// TODO: Add More Data Members As Needed
+
 	//
 
 public:

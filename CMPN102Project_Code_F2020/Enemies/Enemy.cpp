@@ -177,3 +177,4 @@ void Enemy::Move(int m)
 void Enemy::Act(int t,Castle&c)
 {}
 
+////////////////////////////////////////////////// untill here
