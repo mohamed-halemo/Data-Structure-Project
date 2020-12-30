@@ -270,6 +270,8 @@
     </ClCompile>
     <ClCompile Include="Demo_Main.cpp" />
     <ClCompile Include="Enemies\Enemy.cpp" />
+    <ClCompile Include="Fighter.cpp" />
+    <ClCompile Include="Freezer.cpp" />
     <ClCompile Include="GUI\GUI.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
@@ -298,6 +300,8 @@
     <ClInclude Include="CMUgraphicsLib\jpeg\jversion.h" />
     <ClInclude Include="Defs.h" />
     <ClInclude Include="Enemies\Enemy.h" />
+    <ClInclude Include="Fighter.h" />
+    <ClInclude Include="Freezer.h" />
     <ClInclude Include="Generic_DS\Node.h" />
     <ClInclude Include="Generic_DS\Queue.h" />
     <ClInclude Include="GUI\GUI.h" />

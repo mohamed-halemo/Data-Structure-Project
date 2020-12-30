@@ -31,3 +31,18 @@ int  Castle::getNumberOfEnemiesBeingAttacked(){
 int Castle::getNumberOfKilledEnemies(){
 	return NumberOfKilledEnemies;
 }
+
+////////////////////////////////////////// AbdelHALEM
+void Castle::SetSilenceDuration(int S)
+{
+	if (S >= 2)
+	{
+		Silenced = true;
+		SilenceDuration = S;
+	}
+}
+bool Castle::IsSilenced()
+{
+	return Silenced;
+}
+//////////////////////////////////////

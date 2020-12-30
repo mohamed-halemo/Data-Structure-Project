@@ -141,6 +141,8 @@
       <Filter>Castle</Filter>
     </ClCompile>
     <ClCompile Include="Stack.cpp" />
+    <ClCompile Include="Fighter.cpp" />
+    <ClCompile Include="Freezer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h">
@@ -221,5 +223,7 @@
       <Filter>Castle</Filter>
     </ClInclude>
     <ClInclude Include="Stack.h" />
+    <ClInclude Include="Fighter.h" />
+    <ClInclude Include="Freezer.h" />
   </ItemGroup>
 </Project>

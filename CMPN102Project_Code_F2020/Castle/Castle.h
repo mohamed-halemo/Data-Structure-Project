@@ -11,7 +11,8 @@ class Castle
 	int NumberOfEnemiesBeingAttacked;
 	int FrostingTime; //precent is 20%
 	int NumberOfKilledEnemies;
-
+	int SilenceDuration;
+	bool Silenced;
 
 
 public:
@@ -28,7 +29,9 @@ public:
 
 	//
 	// TODO: Add More Member Functions As Needed
-	//
-
+	////////////////////////////////////////////////AbdelHalem
+	void SetSilenceDuration(int);
+	bool IsSilenced();
+	///////////////////////////////////////////
 };
 

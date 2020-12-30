@@ -2,7 +2,7 @@
 
 #include "..\Defs.h"
 #include "..\CMUgraphicsLib\CMUgraphics.h"
-
+class Castle;
 class GUI;
 // Enemy is the base class of each type of enemy
 // Enemy should be an abstract class in next phases
@@ -21,17 +21,16 @@ protected:
 	
 	///////yousef
 															
-	double Power;			 //The power of the enemy.
-	int Reload_Period;		 //Time for an enemy to reload its weapon.
-	int Speed;				 //number of meters an enemy can move in a single time step.
 	ENMY_TYPE Enemy_Type;    //Fighter, Healer or Freezer															
 	bool Active_Enemy;       //is an enemy with Arrival Time ≤ current time step & Health > 0.
 	bool Frosted_Enemy;      //Frosted enemies cannot move or attack castle.														
-	int Fire_Power; 
 	///////yousef
 	
 
 	//added by ABDELHALEM    ////////////////////////////////////////////////////////////////////////
+	double Power;			 //The power of the enemy.
+	int Reload_Period;		 //Time for an enemy to reload its weapon.
+	int Speed;				 //number of meters an enemy can move in a single time step.
 	int AttackTime;//the seconds when enemy is attacking                           xxxxxx
 	int FirstShotDelay; //First Shot Delay FD = Tfirst_shot - Tarrival             xxxxxxx
 	int KillTimeStep; //Kill Time Step                                             xxxxxx
@@ -49,6 +48,7 @@ protected:
 
 public:
 	Enemy(int id, int arrTime, int d = MaxDistance);
+
 	virtual ~Enemy();
 
 	int Enemy::GetID() const;
@@ -70,8 +70,6 @@ public:
 	void SetFrosted_Enemy(bool);
 	bool GetFrosted_Enemy();
 	
-	void SetFire_Power(double);
-	double GetFire_Power();
 	
 	/////yousef
 
@@ -108,10 +106,12 @@ public:
 	int GetLifeTime();
 	void SetFrostedTime(int);
 	int GetFrostedTime();
-	//until here            ////////////////////////////////////////////////////////////////////////
+	
 
 	// Virtual Functions: ----------------
-
+	virtual void Move(int) ;	    //All enemies can move
+	virtual void Act(int,Castle&)  ;
+	//until here            /////////////////////////////////////////////////////////////////////////////////
 	//virtual void Move() = 0;	//All enemies can move
 	//virtual void Act() = 0;	//Acting means fighting or healing
 

@@ -80,12 +80,7 @@ bool Enemy::GetFrosted_Enemy(){
 	return Frosted_Enemy;
 }
 
-void Enemy::SetFire_Power(double x){
-	Fire_Power=x;
-}
-double Enemy::GetFire_Power(){
-	return Fire_Power;
-}
+
 
 //////yousef
 
@@ -176,3 +171,9 @@ int Enemy::GetFrostedTime()
 {
 	return FrostedTime;
 }
+
+void Enemy::Move(int m)
+{}
+void Enemy::Act(int t,Castle&c)
+{}
+
