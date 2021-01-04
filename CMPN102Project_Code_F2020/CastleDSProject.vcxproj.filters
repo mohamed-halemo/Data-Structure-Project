@@ -149,6 +149,9 @@
     <ClCompile Include="Stack.cpp">
       <Filter>Generic_DS</Filter>
     </ClCompile>
+    <ClCompile Include="Healer.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h">
@@ -242,6 +245,9 @@
     </ClInclude>
     <ClInclude Include="Priority_Node.h">
       <Filter>Generic_DS</Filter>
+    </ClInclude>
+    <ClInclude Include="Healer.h">
+      <Filter>Enemies</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

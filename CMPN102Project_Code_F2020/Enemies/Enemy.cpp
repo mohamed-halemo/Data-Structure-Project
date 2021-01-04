@@ -67,17 +67,23 @@ ENMY_TYPE Enemy::GetEnemyType()
 {
 	return Enemy_Type;
 }
-void Enemy::SetActive_Enemy(bool x){
-	Active_Enemy=x;
+void Enemy::SetActive_Enemy(bool x) {
+	Active_Enemy = x;
 }
-bool Enemy::GetActive_Enemy(){
+bool Enemy::GetActive_Enemy() {
 	return Active_Enemy;
 }
-void Enemy::SetFrosted_Enemy(bool x){
-	Frosted_Enemy=x;
+void Enemy::SetFrosted_Enemy(bool x) {
+	Frosted_Enemy = x;
 }
-bool Enemy::GetFrosted_Enemy(){
+bool Enemy::GetFrosted_Enemy() {
 	return Frosted_Enemy;
+}
+double Enemy::getoriginal_health() {
+	return original_health;
+}
+void Enemy::setoriginal_health(double p) {
+	original_health = p;
 }
 
 
@@ -174,7 +180,7 @@ int Enemy::GetFrostedTime() const
 
 void Enemy::Move(int m)
 {}
-void Enemy::Act(int t,Castle&c)
+void Enemy::Act(int t, Castle& c)
 {}
 
 ////////////////////////////////////////////////// until here

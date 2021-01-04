@@ -31,3 +31,9 @@ void Freezer::Act( int Ts, Castle &C)
 
 	Move(Ts);
 }
+
+void::Freezer::Actualspeed() {
+	if (Health < 0.5 * original_health) {
+		Speed = 0.5 * Speed;
+	}
+}

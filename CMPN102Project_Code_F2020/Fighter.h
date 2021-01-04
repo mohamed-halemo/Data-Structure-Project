@@ -8,6 +8,7 @@ public:
 
 	virtual void Move(int) ;	    //All enemies can move
 	virtual void Act(int, Castle&) ;
+	virtual void Actualspeed();
 
 
 };

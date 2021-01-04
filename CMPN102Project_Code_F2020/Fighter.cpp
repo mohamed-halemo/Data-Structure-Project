@@ -32,5 +32,9 @@ void Fighter::Act(int T, Castle& C)
 
 	Move(T);
 }
-
+void::Fighter::Actualspeed() {
+	if (Health < 0.5 * original_health) {
+		Speed = 0.5 * Speed;
+	}
+}
 //////////////////////////////////////////////////////////////////////

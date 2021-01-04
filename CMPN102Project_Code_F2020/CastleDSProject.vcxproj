@@ -19,7 +19,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -273,6 +273,7 @@
     <ClCompile Include="Fighter.cpp" />
     <ClCompile Include="Freezer.cpp" />
     <ClCompile Include="GUI\GUI.cpp" />
+    <ClCompile Include="Healer.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -305,6 +306,7 @@
     <ClInclude Include="Generic_DS\Node.h" />
     <ClInclude Include="Generic_DS\Queue.h" />
     <ClInclude Include="GUI\GUI.h" />
+    <ClInclude Include="Healer.h" />
     <ClInclude Include="Priority_Node.h" />
     <ClInclude Include="Priority_Queue.h" />
     <ClInclude Include="Stack.h" />
