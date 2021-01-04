@@ -3,7 +3,7 @@
 class Freezer : public Enemy
 {
 public:
-	Freezer(int ID, ENMY_TYPE, int AT, int H, int POW, int reload, int speed);
+	Freezer(int ID, int AT, int H, int POW, int reload, int speed);
 	virtual void Move(int);	    //All enemies can move
 	virtual void Act(int, Castle&);
 

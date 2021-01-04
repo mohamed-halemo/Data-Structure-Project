@@ -1,9 +1,9 @@
 #include "Fighter.h"
 #include"Castle/Castle.h"
 ////////////////////Done By AbdelHalem
-Fighter::Fighter( int id, ENMY_TYPE F, int AT, int H, int POW, int reload, int speed):Enemy(id,AT)
+Fighter::Fighter( int id, int AT, double H, double POW, int reload, int speed):Enemy(id,AT)
 {
-	
+	SetEnemyType(FIGHTER);
 	Health = H;
 	Power = POW;
 	Reload_Period = reload;

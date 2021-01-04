@@ -8,6 +8,7 @@ class Castle
 	// TODO: Add More Data Members As Needed
 	//
 	double Power;
+	double Damage;
 	int NumberOfEnemiesBeingAttacked;
 	int FrostingTime; //precent is 20%
 	int NumberOfKilledEnemies;
@@ -22,10 +23,12 @@ public:
 
 	//////////////////////////////////////////////////////
 	void setPower(double P);
-	double getPower();
+	double getPower() const;
+	void setDamage(double D);
+	double getDamage() const;
 	void setNumberOfEnemiesBeingAttacked(int N);
-	int getNumberOfEnemiesBeingAttacked();
-	int getNumberOfKilledEnemies();
+	int getNumberOfEnemiesBeingAttacked() const;
+	int getNumberOfKilledEnemies() const;
 
 	//
 	// TODO: Add More Member Functions As Needed

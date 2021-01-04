@@ -35,10 +35,13 @@ void Battle::RunSimulation()
 	switch (mode)	//Add a function for each mode in next phases
 	{
 	case MODE_INTR:
+		Interactive();
 		break;
 	case MODE_STEP:
+		Step();
 		break;
 	case MODE_SLNT:
+		Silent();
 		break;
 	case MODE_DEMO:
 		Just_A_Demo();
@@ -48,6 +51,45 @@ void Battle::RunSimulation()
 	delete pGUI;
 	
 }
+
+void Battle::Interactive()
+{
+
+	pGUI->PrintMessage("Please Enter The File's Name To Load The Input Data: ");
+	//(TO DO) IMPLEMENT HOW TO GET THE NAME AND STORE IT AND CHECK THE EXISTENCE OF THE FILE HERE.
+	int NumberOfShots = 5; //Number Of Shots Shot By Castle (assumed a random number which is 5 till we implement save/load)
+	CurrentTimeStep = 0;
+	BCastle.setNumberOfEnemiesBeingAttacked(NumberOfShots);
+	while(BCastle.getNumberOfEnemiesBeingAttacked() > 0)
+	{
+		if(!Pri_Q_Fighters.isEmpty())
+		{
+			Fighter * fighter;
+			Pri_Q_Fighters.dequeue(fighter);
+			fighter->SetHealth(fighter->GetHealth() - BCastle.getDamage());
+			if(fighter->GetHealth() <= 0)
+			{
+				fighter->SetKillTimeStep(CurrentTimeStep);
+				fighter->SetStatus(KILD);
+			}
+
+		}
+
+	}
+
+}
+
+void Battle::Step()
+{
+
+}
+
+
+void Battle::Silent()
+{
+
+}
+
 
 
 //This is just a demo function for project introductory phase

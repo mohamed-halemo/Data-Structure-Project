@@ -19,16 +19,22 @@ double Castle::GetHealth() const
 void Castle::setPower(double P){
 	Power=P;
 }
-double Castle::getPower(){
+double Castle::getPower() const{
 	return Power;
+}
+void Castle::setDamage(double D){
+	Damage=D;
+}
+double Castle::getDamage() const{
+	return Damage;
 }
 void Castle::setNumberOfEnemiesBeingAttacked(int N){
 	NumberOfEnemiesBeingAttacked=N;
 }
-int  Castle::getNumberOfEnemiesBeingAttacked(){
+int  Castle::getNumberOfEnemiesBeingAttacked() const{
 	return NumberOfEnemiesBeingAttacked;
 }
-int Castle::getNumberOfKilledEnemies(){
+int Castle::getNumberOfKilledEnemies() const{
 	return NumberOfKilledEnemies;
 }
 

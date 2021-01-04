@@ -1,8 +1,9 @@
 #pragma once
 
-#include "Enemies\Enemy.h"
+#include "Fighter.h"
 #include "Castle\Castle.h"
 #include "Generic_DS\Queue.h"
+#include "Priority_Queue.h"
 #include "GUI\GUI.h"
 
 // it is the controller of the project
@@ -23,6 +24,7 @@ private:
 
 	Queue<Enemy*> Q_Inactive;		//Queue of inactive enemies
 
+	Priority_Queue<Fighter*> Pri_Q_Fighters;	//A priority queue of fighters
 
 	/// ==> 
 	//	DEMO-related members. Should be removed in phases 1&2
@@ -47,6 +49,9 @@ public:
 
 
 	void AddtoDemoList(Enemy* Ptr);		//Add Enemy to the demo queue of enemies (for demo purposes only)
+	void Interactive();				//Battle using Interactive Mode
+	void Step();					//Battle using Step-by-Step Mode (Difference is a timer instead of a mouse click)
+	void Silent();					//Battle using Silent Mode (Nothing happens, only output shows up)
 	void Just_A_Demo();	//just to show a demo and should be removed in phase1 1 & 2
 	void Demo_UpdateEnemies();	//Randomly update enemies distance/status (for demo purposes)
 

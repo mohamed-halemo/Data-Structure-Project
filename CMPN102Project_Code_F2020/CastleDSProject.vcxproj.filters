@@ -140,9 +140,15 @@
     <ClCompile Include="Castle\Castle.cpp">
       <Filter>Castle</Filter>
     </ClCompile>
-    <ClCompile Include="Stack.cpp" />
-    <ClCompile Include="Fighter.cpp" />
-    <ClCompile Include="Freezer.cpp" />
+    <ClCompile Include="Freezer.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Fighter.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Stack.cpp">
+      <Filter>Generic_DS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h">
@@ -206,7 +212,6 @@
       <Filter>CMUgraphicsLib\JPEG</Filter>
     </ClInclude>
     <ClInclude Include="Battle.h" />
-    <ClInclude Include="Defs.h" />
     <ClInclude Include="Enemies\Enemy.h">
       <Filter>Enemies</Filter>
     </ClInclude>
@@ -222,8 +227,21 @@
     <ClInclude Include="Castle\Castle.h">
       <Filter>Castle</Filter>
     </ClInclude>
-    <ClInclude Include="Stack.h" />
-    <ClInclude Include="Fighter.h" />
-    <ClInclude Include="Freezer.h" />
+    <ClInclude Include="Freezer.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Fighter.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Generic_DS</Filter>
+    </ClInclude>
+    <ClInclude Include="Defs.h" />
+    <ClInclude Include="Priority_Queue.h">
+      <Filter>Generic_DS</Filter>
+    </ClInclude>
+    <ClInclude Include="Priority_Node.h">
+      <Filter>Generic_DS</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

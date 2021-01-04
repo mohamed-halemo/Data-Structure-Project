@@ -1,9 +1,9 @@
 #include "Freezer.h"
 #include"Castle/Castle.h"
 ////////////////////Done By AbdelHalem
-Freezer::Freezer(int id, ENMY_TYPE F, int AT, int H, int POW, int reload, int speed) :Enemy(id, AT)
+Freezer::Freezer(int id, int AT, int H, int POW, int reload, int speed) :Enemy(id, AT)
 {
-
+	SetEnemyType(FREEZER);
 	Health = H;
 	Power = POW;
 	Reload_Period = reload;

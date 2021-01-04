@@ -17,6 +17,7 @@ protected:
 	int Distance;	//Horizontal distance between enemy & the tower of its region
 					//Always positive (ranges from 2 to 60)
 	double Health;	//Enemy health
+	double MaxHealth; //Enemy's maximum health
 	
 	
 	///////yousef
@@ -37,7 +38,7 @@ protected:
 	int KillDelay; //KillDelay KD = Tenemy_killed - Tfirst_shot                    xxxxxx
 	int LifeTime; //Life Time (FD+KD)                                               xxxxxxx
 	int FrostedTime;//frosted Time (castle1st frost shot+frosting time)
-	int Priority;
+	float Priority;
 	
 	//    /////////////////////////////////////////////////////////////////////////////
 	
@@ -82,38 +83,40 @@ public:
 
 
 	void SetHealth(double);
-	double GetHealth();
-	int GetPower();
+	double GetHealth() const;
+	void SetMaxHealth(double);
+	double GetMaxHealth() const;
+	int GetPower() const;
 	void SetPower(int);
-	int GetReload_Period();
+	int GetReload_Period() const;
 	void SetReload_Period(int);
-	int GetSpeed();
+	int GetSpeed() const;
 	void SetSpeed(int);
 	
 	
 	
 	void SetAttackTime(int);
-	int GetAttackTime();
-	void SetPriority(int);
-	int GetPriority();
+	int GetAttackTime() const;
+	void SetPriority(float);
+	float GetPriority() const;
 	
 	void SetFirstShotDelay(int F);
-	int GetFirstShotDelay();
+	int GetFirstShotDelay() const;
 	void SetKillTimeStep(int T);
-	int GetKillTimeStep();
+	int GetKillTimeStep() const;
 	void SetKillDelay(int kd);
-	int GetKillDelay();
-	int GetLifeTime();
+	int GetKillDelay() const;
+	int GetLifeTime() const;
 	void SetFrostedTime(int);
-	int GetFrostedTime();
+	int GetFrostedTime() const;
 	
 
 	// Virtual Functions: ----------------
 	virtual void Move(int) ;	    //All enemies can move
 	virtual void Act(int,Castle&)  ;
 	//until here            /////////////////////////////////////////////////////////////////////////////////
-	//virtual void Move() = 0;	//All enemies can move
-	//virtual void Act() = 0;	//Acting means fighting or healing
+	//virtual void Move(int) = 0;	//All enemies can move
+	//virtual void Act(int,Castle&) = 0;	//Acting means fighting or healing
 
 	//
 	// TODO: Add More Member Functions As Needed
