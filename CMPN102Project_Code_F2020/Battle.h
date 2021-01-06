@@ -16,14 +16,14 @@ private:
 	int ActiveCount, FrostedCount, KilledCount;	//no. of enemies (Active, Frosted, killed so far)
 	int CurrentTimeStep;
 	//Enemy * BEnemiesForDraw[MaxEnemyCount]; // This Array of Pointers is used for drawing elements in the GUI
-								  			// No matter what list type you are using to hold enemies, 
+											// No matter what list type you are using to hold enemies, 
 											// you must pass the enemies to the GUI function as an array of enemy pointers. 
 											// At every time step, you should update those pointers 
 	//m										// to point to the current active enemies 
 											// then pass the pointers list to the GUI function
 
 	Queue<Enemy*> Q_Inactive;		//Queue of inactive enemies
-
+	Queue<Enemy*> Q_Killed;         //Queue of killed enemies
 	Priority_Queue<Fighter*> Pri_Q_Fighters;	//A priority queue of fighters
 
 	/// ==> 
@@ -36,14 +36,16 @@ private:
 
 	//
 	// TODO: Add More Data Members As Needed
-
+	int CastleHealth;
+	int MaxEnemy;
+	int CastlePower;
 	//
 
 public:
-	
+
 	Battle();
 	void AddAllListsToDrawingList();		//Add enemy lists (inactive, active,.....) to drawing list to be displayed on user interface
-	Castle * GetCastle();
+	Castle* GetCastle();
 	void RunSimulation();
 	void ActivateEnemies();		//check the inactive list and activate all enemies that has arrived
 
@@ -57,6 +59,8 @@ public:
 
 	//
 	// TODO: Add More Member Functions As Needed
+	void InputFile(string FileName);
+	void OutputFile(GUI* pGUI);
 	//
 };
 
